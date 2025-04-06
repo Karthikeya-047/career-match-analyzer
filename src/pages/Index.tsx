@@ -29,8 +29,11 @@ const Index = () => {
     
     // Simulate API call with setTimeout
     setTimeout(() => {
-      // Mock results
-      const mockResults = {
+      // Mock results with explicitly typed feedback items
+      const mockResults: {
+        matchPercentage: number;
+        feedback: { type: 'positive' | 'negative'; text: string; }[];
+      } = {
         matchPercentage: 75,
         feedback: [
           { type: 'positive', text: "Your technical skills match the job requirements well." },
